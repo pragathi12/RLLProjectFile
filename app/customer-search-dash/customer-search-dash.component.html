@@ -1,0 +1,62 @@
+<!-- <p>customer-search-dash works!</p>
+Customer Id : 
+<input type="text" name="cus_id" [(ngModel)]="cus_id" /> 
+<br/><br/>
+<input type="button" value="Search" (click)="search()" />
+
+Customer Name :  {{(customers | async)?.cus_name}}  <br/>
+Customer Phoneno :  {{(customers | async)?.cus_ph_no}}  <br/>
+Customer Username :  {{(customers | async)?.cus_username}}  <br/>
+Customer Password :  {{(customers| async)?.pwd}}  <br/>
+Customer Email :  {{(customers | async)?.cus_email}}  <br/> -->
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+    <body>
+        <div class="row">
+            <div class="col-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        
+                        <input type="text"  class="search" placeholder="Search here..!" name="cus_id" [(ngModel)]="cus_id">
+                        &nbsp;&nbsp;
+                        <input type="button"  class="submit" value="Search" (click)="search()">
+                          
+                    </div>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">Name:</span>  {{(customers | async)?.cus_name}} 
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">User Name:</span>{{(customers | async)?.cus_username}}
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">Email:</span>  {{(customers | async)?.cus_ph_no}}
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">Phone:</span> {{(customers | async)?.cus_email}} 
+                      </li>
+                      
+                
+                      <li class="list-group-item">
+                        <span class="badge badge-danger">Customer Information</span>
+                      </li>
+                    </ul>
+                  </div>
+
+            </div>
+        </div>
+  </body>
+  </html>
+
+

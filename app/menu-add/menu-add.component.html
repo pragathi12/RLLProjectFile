@@ -1,0 +1,81 @@
+<!--<p>menu-add works!</p>
+
+<form #MenuAdd="ngForm" (ngSubmit)="insert(MenuAdd)"> 
+
+    <p>Menu Item :
+        <input type="text" name="men_item" [(ngModel)]="men.men_item" />
+    </p> 
+    <br/><br/>
+
+    <p>Menu Price :
+        <input type="number" name="men_price" [(ngModel)]="men.men_price" />
+    </p> 
+    <br/><br/>
+
+    <p>Menu Cal :
+        <input type="number" name="men_cal" [(ngModel)]="men.men_cal" />
+    </p> 
+    <br/><br/>
+
+    <p>Menu Speciality :
+        <input type="text" name="men_speciality" [(ngModel)]="men.men_speciality" />
+    </p> 
+    <br/><br/>
+
+    
+
+    <input type="submit" value="Add Menu">
+</form>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="title">
+    Add Menu
+  </div>
+  
+  <form #MenuAdd="ngForm" (ngSubmit)="insert(MenuAdd)">
+    <div class="form">
+        <div class="input_field">
+          
+          <input class="input" type="text" placeholder="Item" name="men_item" [(ngModel)]="men.men_item" />
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="input_field">
+          
+            <input class="input" type="number" placeholder="Rs XXX" name="men_price" [(ngModel)]="men.men_price" />
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="input_field">
+          
+            <input class="input" type="number" placeholder="Calc" name="men_cal" [(ngModel)]="men.men_cal" />
+            <i class="fa fa-user"></i>
+          </div>
+        <div class="input_field">
+          <input type="text" placeholder="Speciality" class="input" name="men_speciality" [(ngModel)]="men.men_speciality">
+          <i class="far fa-user"></i>
+        </div>
+        
+        <!-- <div class="btn">
+            <input type="submit" value="Register">
+        </div> -->
+        <input type="submit" value="Add Menu" class="btn">
+      </div>	
+  </form>
+  </div>
+  
+	
+</body>
+</html>
+
+
+
+
+

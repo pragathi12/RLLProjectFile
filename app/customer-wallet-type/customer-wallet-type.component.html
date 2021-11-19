@@ -1,0 +1,98 @@
+<!--<p>customer-search-wallet </p>
+
+<form #searchForm="ngForm" (ngSubmit)="search(searchForm)">
+    Select Wallet Source:
+    <select name="wal_src" [(ngModel)]="wal_src" required>
+        <option value="PAYTM">PAYTM</option>
+        <option value="CREDIT CARD">CREDIT CARD</option>
+        <option value="DEBIT CARD">DEBIT CARD</option>
+        <option value="GOOGLEPAY">GOOGLEPAY</option>
+    </select><br/><br/>
+    <input type="submit" value="Search" />
+    <div *ngIf="searchForm.submitted && !isFormSubmitted">
+        <div *ngIf="loginForm.submitted && isFormSubmitted==false"> 
+        <p style="color:red">
+         Please Enter Wallet Source
+        </p>
+      </div>
+</form>
+<hr>
+
+Customer Id :  {{(wallet | async)?.cus_id}}  <br/>
+Wallet Id  :  {{(wallet | async)?.wal_id}}  <br/>
+Wallet Amount :  {{(wallet | async)?.wal_amount}}  <br/>
+Wallet Source :  {{(wallet | async)?.wal_src}}  <br/>-->
+
+
+<!-- <p>customer-search-dash works!</p>
+Customer Id : 
+<input type="text" name="cus_id" [(ngModel)]="cus_id" /> 
+<br/><br/>
+<input type="button" value="Search" (click)="search()" />
+
+Customer Name :  {{(customers | async)?.cus_name}}  <br/>
+Customer Phoneno :  {{(customers | async)?.cus_ph_no}}  <br/>
+Customer Username :  {{(customers | async)?.cus_username}}  <br/>
+Customer Password :  {{(customers| async)?.pwd}}  <br/>
+Customer Email :  {{(customers | async)?.cus_email}}  <br/> -->
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+    <body>
+       <div  class="row">
+            <div class="col-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <form #searchForm="ngForm" (ngSubmit)="search(searchForm)">
+                            Select Wallet Source:
+                            <select name="wal_src" [(ngModel)]="wal_src" required>
+                                <option value="PAYTM">PAYTM</option>
+                                <option value="CREDITCARD">CREDIT CARD</option>
+                                <option value="DEBITCARD">DEBIT CARD</option>
+                                <option value="GOOGLEPAY">GOOGLEPAY</option>
+                            </select>
+                        &nbsp;&nbsp;
+                    
+                        <button type="submit"  class="submit" >Search</button>
+                      </form>    
+                    </div>
+                    <div *ngIf="searchForm.submitted && !isFormSubmitted">
+                        <!-- <div *ngIf="loginForm.submitted && isFormSubmitted==false"> -->
+                        <p style="color:red">
+                         Please Enter Wallet Source
+                        </p>
+                      </div>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">Customer Id:</span>  {{(wallet | async)?.cus_id}} 
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">Wallet Id</span>{{(wallet | async)?.wal_id}}
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">Wallet Amount</span>  {{(wallet | async)?.wal_amount}}
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">Wallet Source</span> {{(wallet | async)?.wal_src}} 
+                      </li>
+                      
+                    </ul>
+                
+                  </div>
+                
+            </div>
+        </div>
+  </body>
+  </html>
+
+

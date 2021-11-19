@@ -1,0 +1,31 @@
+<table class="content-table" >
+    <thead>
+        <tr>
+            <th>Order Id</th>
+            <th>customer Id</th>
+            <th>ven Id</th>
+            <th>Wallet source</th>
+            <th>Menu id</th>
+            <th>order date</th>
+            <th>order quantity</th>
+            <th>order bill amount</th>
+            <th>order status</th>
+            <th>order comments</th>
+        </tr>
+      
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of corders | async">
+            <td>{{c.ord_id}} </td>
+            <td>{{c.cus_id}} </td>
+            <td>{{c.ven_id}} </td>
+            <td>{{c.wal_src}} </td>
+            <td>{{c.men_id}} </td>
+            <td>{{c.ord_date}} </td>
+            <td>{{c.ord_qt}} </td>
+            <td>{{c.ord_billamt}} </td>
+            <td>{{c.ord_status}} </td>
+            <td>{{c.ord_comments}} </td>
+        </tr>
+    </tbody>
+  </table>

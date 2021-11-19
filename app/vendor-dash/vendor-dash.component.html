@@ -1,0 +1,26 @@
+
+
+<table class="content-table" >
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Phone no</th>
+        <th>Username</th>
+        <th>password</th>
+        <th>email</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of vendors | async">
+            <td>{{u.ven_id}} </td>
+            <td>{{u.ven_name}} </td>
+            <td>{{u.ven_phone}} </td>
+            <td>{{u.ven_username}} </td>
+            <td>{{u.ven_password}} </td>
+            <td>{{u.ven_email}} </td>
+           
+        </tr>
+    </tbody>
+  </table>
+

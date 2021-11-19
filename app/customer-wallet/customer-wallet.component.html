@@ -1,0 +1,22 @@
+<table class="content-table" >
+    <thead>
+        <tr>
+            
+            <th>customer Id</th>
+            <th>Wallet Id</th>
+            <th>Wallet source</th>
+            <th>Wallet Amount</th>
+           
+        </tr>
+      
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of cowallet | async">
+            <td>{{c.cus_id}} </td>
+            <td>{{c.wal_id}} </td>
+            <td>{{c.wal_src}} </td>
+            <td>{{c.wal_amount}} </td>
+           
+        </tr>
+    </tbody>
+  </table>

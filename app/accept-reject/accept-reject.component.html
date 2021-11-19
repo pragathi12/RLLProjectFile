@@ -1,0 +1,63 @@
+<!--<p>accept-reject works!</p>
+Vendor Id:
+<input type="number" name="venId"  [(ngModel)]="venId" /> <br/><br/>
+Order Id:
+<input type="number" name="oid" [(ngModel)]="oid" /> <br/><br/>
+Order Status : 
+<select [(ngModel)]="ordStatus">
+  <option value="YES">YES</option>
+  <option value="NO">NO</option>
+</select> <br/><br/>
+<input type="button" value="Accept/Reject" (click)="acceptReject()" /> 
+{{ordStatus}}
+{{result}}-->
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<div  class="row">
+        <div class="col-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                 
+                    <ul class="list-group">
+                        
+                        <li class="list-group-item">
+                          <span class="badge badge-success mr-2">Vendor Id:</span> 
+                          <input type="number" name="venId"  [(ngModel)]="venId" />   <br/> <br/> <br/>  
+    
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-success mr-2">Order Id:</span> 
+                            <input type="number" name="oid" [(ngModel)]="oid" />    <br/> <br/> <br/>  
+                        </li>
+                      
+                        <li class="list-group-item">
+                            <span class="badge badge-success mr-2">Order Status</span>
+                            <select [(ngModel)]="ordStatus">
+                                <option value="YES">YES</option>
+                                <option value="NO">NO</option>
+                              </select> <br/><br/>
+                           
+                        </li>
+                   
+                   
+                    <li class="list-group-item">
+                            <input class="btn"  type="button" value="Accept/Reject" (click)="acceptReject()"/>
+                    </li>
+                    {{ordStatus}}
+                {{result}}
+            </ul>
+
+                </div>
+
+</div>
+                
+</div>
+
+

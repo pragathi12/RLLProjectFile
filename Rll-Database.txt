@@ -1,0 +1,143 @@
+================================ Customer Table ===========================================================
+
+create sequence cus_seq start with 1;
+create table customer(
+    cus_id number default cus_seq.nextval NOT NULL,
+    cus_name varchar2(50) NOT NULL,
+    cus_ph_no varchar2(50) NOT NULL,
+    cus_username varchar2(50) NOT NULL,
+    pwd varchar2(50) NOT NULL,
+    cus_email varchar2(50) NOT NULL,
+    CONSTRAINT customer_pk PRIMARY KEY (cus_id),
+    CONSTRAINT customer_unique UNIQUE (cus_ph_no, cus_username)
+);
+
+
+insert into customer(cus_name,cus_ph_no,cus_username,pwd, cus_email) values('Pragathi Reddy','8095667788','kpragathi','pragathi@','pragathi@gmail.com');
+insert into customer(cus_name,cus_ph_no,cus_username,pwd, cus_email) values('Gauree Barhe ','9345633791','gaureeba','barhe@','gauree@gmail.com');
+insert into customer(cus_name,cus_ph_no,cus_username,pwd, cus_email) values('Divyanshu charak','9535446679','divyans','divyanshu@','divyanshu@gmail.com');
+insert into customer(cus_name,cus_ph_no,cus_username,pwd, cus_email) values('Varun naik','9735712336','varunna','varun@','varun@gmail.com');
+insert into customer(cus_name,cus_ph_no,cus_username,pwd, cus_email) values('Bharath S ','7099812443','bharaths','bharath@','bharath@gmail.com');
+insert into customer(cus_name,cus_ph_no,cus_username,pwd, cus_email) values('Haresh','7733076532','hareshhh','haresh@','haresh@gmail.com');
+insert into customer(cus_name,cus_ph_no,cus_username,pwd, cus_email) values('Aseem Suri','9986577354','aseemsu','assem@','assem@gmail.com');
+insert into customer(cus_name,cus_ph_no,cus_username,pwd, cus_email) values('Ruchita Kunkule','8843265789','ruchithakun','ruchitha@','ruchitha@gmail.com');
+insert into customer(cus_name,cus_ph_no,cus_username,pwd, cus_email) values('Bharath Chopade','7765488321','bharathch','chopade@','bhachopade@gmail.com');
+
+====================== Menu Table ========================================
+ 
+create sequence menu_seq start with 1;
+create table menus(
+    men_id number default menu_seq.nextval NOT NULL,
+    men_item varchar2(50) default NULL,
+    men_price decimal(9,2) default NULL,
+    men_cal number NOT NULL,
+     men_speciality varchar2(50) NOT NULL,
+    CONSTRAINT menus_pk PRIMARY KEY(men_id)
+    );
+
+insert into menus(men_item,men_price, men_cal, men_speciality) values('Chees_Tikka',265,150,'Tandoori Snacks');
+insert into menus(men_item,men_price, men_cal, men_speciality) values('Soya_Chaap',175,70,'Tandoori Snacks');
+insert into menus(men_item,men_price, men_cal, men_speciality) values('ManChow_Soup',159,120,'Soups');
+insert into menus(men_item,men_price, men_cal, men_speciality) values('Dum_Aloo',240,150,'Main Course');
+insert into menus(men_item,men_price, men_cal, men_speciality) values('Dal_Fry',240,130,'Main Course');
+insert into menus(men_item,men_price, men_cal, men_speciality) values('Garlic_Bread',149,159,'Sandwich');
+insert into menus(men_item,men_price, men_cal, men_speciality) values('Grill_Cheese_Sandwich',149,291,'Sandwich');
+insert into menus(men_item,men_price, men_cal, men_speciality) values('Garlic_Vegetable',149,159,'Salads');
+insert into menus(men_item,men_price, men_cal, men_speciality) values('WaterMelon_cucumber_cheese_salad',149,291,'Salads');
+
+Insert into menus (men_item,men_price, men_cal, men_speciality)values('Dose',45,100,'Masala_and_Extra_Butter');
+Insert into menus(men_item,men_price, men_cal, men_speciality) values('Pooha',35,130,'Extra_Penutt');
+Insert into menus(men_item,men_price, men_cal, men_speciality) values('Idly_Sambar',40,400,'With_Vade');
+Insert into menus(men_item,men_price, men_cal, men_speciality) values('Chole',55,300,'Special_Bhature');
+Insert into menus (men_item,men_price, men_cal, men_speciality)values('Poori',30,400,'One_Vade');
+Insert into menus(men_item,men_price, men_cal, men_speciality) values('Oats Idli',45,100,'Spicy');
+Insert into menus(men_item,men_price, men_cal, men_speciality) values('Masala Puris',35,130,'Curds and Chunda');
+Insert into menus(men_item,men_price, men_cal, men_speciality) values('Roti',40,200,'Jowar');
+Insert into menus(men_item,men_price, men_cal, men_speciality) values('Bread_Upma',50,100,'Extra_Butter');
+Insert into menus(men_item,men_price, men_cal, men_speciality) values('Aloo Paratha',70,250,'Spicy');
+
+========= vendor Table ========================================
+
+create sequence ven_seq start with 1;
+create table vendor(
+ven_id number default ven_seq.nextval NOT NULL,
+ven_name varchar2(50) NOT NULL,
+ven_Phone varchar2(50) NOT NULL,
+ven_username varchar2(50) NOT NULL,
+ven_password varchar2(30) NOT NULL,
+ven_email varchar2(50) NOT NULL,
+CONSTRAINT vendor_pk PRIMARY KEY(ven_id)
+);
+
+
+insert into vendor(ven_name,ven_Phone,ven_username,ven_password,ven_email) values('Ramada','987665382','ramada','ramada','ramada@gmail.com');
+insert into vendor(ven_name,ven_Phone,ven_username,ven_password,ven_email) values('Hayat','987665383','Hayat','Hayat','Hayat@gmail.com');
+insert into vendor(ven_name,ven_Phone,ven_username,ven_password,ven_email) values('kc','987665384','kc','kc','kc@gmail.com');
+insert into vendor(ven_name,ven_Phone,ven_username,ven_password,ven_email) values('Bjalta','987665385','bajalta','bajalta','bajalta@gmail.com');
+insert into vendor(ven_name,ven_Phone,ven_username,ven_password,ven_email) values('Momos','987665386','momos','momos','momos@gmail.com');
+insert into vendor(ven_name,ven_Phone,ven_username,ven_password,ven_email) values('Swiggy','987665387','swiggy','swiggy','swiggy@gmail.com');
+insert into vendor(ven_name,ven_Phone,ven_username,ven_password,ven_email) values('Ramen','987665388','ramen','ramen','ramen@gmail.com');
+insert into vendor(ven_name,ven_Phone,ven_username,ven_password,ven_email) values('fastfood','987665389','fast','fast','fast@gmail.com');
+insert into vendor(ven_name,ven_Phone,ven_username,ven_password,ven_email) values('monjonese','987665310','monjonese','monjonese','monjonese@gmail.com');
+
+====================== Order Table ===============================
+create sequence ord_seq start with 1;
+
+ create table orders(
+    ord_id number default ord_seq.nextval NOT NULL,
+    cus_id number NOT NUll,
+    ven_id number NOT NULL,
+    wal_src varchar2(50) default NULL,
+    men_id number NOT NULL,
+    ord_date date default NULL,
+    ord_qt number default NULL,
+    ord_billamt DOUBLE PRECISION default NULL,
+   ord_status varchar2(50) CHECK(ord_status IN ('ACCEPTED', 'PENDING', 'DENIED') ),
+   ord_comments varchar2(50) default NULL,
+   CONSTRAINT orders_pk PRIMARY KEY(ord_id),
+   CONSTRAINT fk_order_comp
+    FOREIGN KEY (cus_id)
+    REFERENCES customer(cus_id),
+CONSTRAINT fk_order_comp1
+    FOREIGN KEY (ven_id)
+    REFERENCES vendor(ven_id)
+   );
+
+
+INSERT INTO orders(cus_id,ven_id,wal_src,men_id,ord_date,ord_qt,ord_billamt,ord_status,ord_comments) values (1,1,'PAYTM',4,'15-feb-2021',4,55673,'ACCEPTED','Make It Spicy');
+INSERT INTO orders(cus_id,ven_id,wal_src,men_id,ord_date,ord_qt,ord_billamt,ord_status,ord_comments) VALUES (2,2,'GOOGLEPAY',2,'10-Mar-2021',1,48585,'PENDING','Make It Sweet');
+INSERT INTO orders(cus_id,ven_id,wal_src,men_id,ord_date,ord_qt,ord_billamt,ord_status,ord_comments) VALUES (3,3,'CREDITCARD',6,'29-jan-2021',2,65443,'DENIED','Add Little Salt');
+INSERT INTO orders(cus_id,ven_id,wal_src,men_id,ord_date,ord_qt,ord_billamt,ord_status,ord_comments) values (4,4,'PAYTM',3,'14-Mar-2021',6,65456,'ACCEPTED','Give more Cheese');
+INSERT INTO orders(cus_id,ven_id,wal_src,men_id,ord_date,ord_qt,ord_billamt,ord_status,ord_comments) VALUES (5,5,'GOOGLEPAY',1,'11-jan-2021',3,45654,'PENDING','Improve Quality');
+INSERT INTO orders(cus_id,ven_id,wal_src,men_id,ord_date,ord_qt,ord_billamt,ord_status,ord_comments) VALUES (6,6,'PAYTM',5,'25-Mar-2021',2,65456,'DENIED','Delicious Food');
+INSERT INTO orders(cus_id,ven_id,wal_src,men_id,ord_date,ord_qt,ord_billamt,ord_status,ord_comments) values (7,7,'DEBITCARD',6,'23-Dec-2021',3,74552,'ACCEPTED','Want less oily');
+INSERT INTO orders(cus_id,ven_id,wal_src,men_id,ord_date,ord_qt,ord_billamt,ord_status,ord_comments) VALUES (8,8,'DEBITCARD',11,'19-july-2021',6,71266,'PENDING','Make it sweet');
+INSERT INTO orders(cus_id,ven_id,wal_src,men_id,ord_date,ord_qt,ord_billamt,ord_status,ord_comments) VALUES (9,9,'DEBITCARD',10,'25-Aug-2021',5,94551,'DENIED','Nice quality');
+
+
+========================= Wallet Table ===================================================
+
+create sequence wal_seq start with 1;
+create table wallet(
+    cus_id number default NULL,
+    wal_id number default wal_seq.nextval NOT NULL,
+    wal_amount DOUBLE PRECISION NOT NULL,
+    wal_src varchar2(50) check(wal_src IN ('PAYTM', 'CREDITCARD', 'DEBITCARD','GOOGLEPAY')),
+    CONSTRAINT wallet_pk PRIMARY KEY(wal_id),
+    CONSTRAINT wallet_unique UNIQUE (cus_id,wal_src)
+    );
+
+
+INSERT INTO wallet(cus_id,wal_amount,wal_src) VALUES (1,7602,'CREDITCARD');
+INSERT INTO wallet(cus_id,wal_amount,wal_src) VALUES (1,5000,'PAYTM');
+INSERT INTO wallet(cus_id,wal_amount,wal_src) VALUES (2,4500.36,'GOOGLEPAY');
+INSERT INTO wallet(cus_id,wal_amount,wal_src) VALUES (2,5000.36,'DEBITCARD');
+INSERT INTO wallet(cus_id,wal_amount,wal_src) VALUES (3,4785.23,'CREDITCARD');
+INSERT INTO wallet(cus_id,wal_amount,wal_src) VALUES (4,9000,'PAYTM');
+INSERT INTO wallet(cus_id,wal_amount,wal_src) VALUES (5,4850,'GOOGLEPAY');
+INSERT INTO wallet (cus_id,wal_amount,wal_src)VALUES (6,586.36,'PAYTM');
+INSERT INTO wallet(cus_id,wal_amount,wal_src) VALUES (7,4526,'DEBITCARD');
+INSERT INTO wallet(cus_id,wal_amount,wal_src) VALUES (8,4596,'DEBITCARD');
+INSERT INTO wallet(cus_id,wal_amount,wal_src) VALUES (9,2500,'DEBITCARD');
+
+=======================================================================================================

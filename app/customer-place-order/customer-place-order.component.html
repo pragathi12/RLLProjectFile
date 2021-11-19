@@ -1,0 +1,127 @@
+<!--<p>customer-place-order</p>
+<form id="placeOrder" >
+
+    <p>Customer Id :</p> 
+    <input type="number" name="orderdetails.cus_id" [(ngModel)]="orderdetails.cus_id" readonly />  <br/> <br/> <br/>  
+
+    Select Menu Item 
+    <select [(ngModel)]="orderdetails.men_id" name="men_id" (change)="showAmount()">
+        <option *ngFor="let e of menu | async" value={{e.men_id}}>
+            {{e.men_item}}
+        </option>
+    </select> <br/><br/> 
+
+    <p>Price :</p> 
+    <input type="number" name="price" [(ngModel)]="price" readonly /> <br/><br/>
+
+    <p>Select Date</p> 
+    <input type="date" name="ord_date" [(ngModel)]="orderdetails.ord_date" /> <br/><br/>
+
+    <p>Select Vendor :</p>
+    <select [(ngModel)]="orderdetails.ven_id" name="ven_id">
+        <option *ngFor="let f of vendor | async" value={{f.ven_id}}>
+            {{f.ven_name}}
+        </option>
+    </select> <br/><br/>
+
+    <p>Select Quantity :</p>   
+    <input type="number" [(ngModel)]="orderdetails.ord_qt" name="ord_qt" /> <br/><br/> 
+
+    Select Wallet Type :   
+    <select [(ngModel)]="orderdetails.wal_src" name="wal_src">
+        <option *ngFor="let f of wallet | async" value={{f.wal_src}}>
+            {{f.wal_src}}
+        </option>
+    </select> <br/><br/>
+
+    <p>Order Comments  :</p>
+    <input type="text" [(ngModel)]="orderdetails.ord_comments" name="ord_comments" /> <br/><br/> 
+
+    <input type="button" value="PlaceOrder" (click)="placeOrder()"/>
+</form>
+{{msg}}-->
+
+            <head>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+              
+              
+              <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          </head>
+          <div  class="row">
+                  <div class="col-6">
+                      <div class="card mb-4">
+                          <div class="card-header">
+                            <form id="placeOrder">
+                              <ul class="list-group">
+                                  
+                                  <li class="list-group-item">
+                                    <span class="badge badge-success mr-2">Customer Id:</span> 
+                                    <input type="number" name="orderdetails.cus_id" [(ngModel)]="orderdetails.cus_id" />  
+              
+                                  </li>
+                                  <li class="list-group-item">
+                                      <span class="badge badge-success mr-2">Select Menu Item:</span>
+                                      <select [(ngModel)]="orderdetails.men_id" name="men_id" (change)="showAmount()">
+                                          <option *ngFor="let e of menu | async" value={{e.men_id}}>
+                                              {{e.men_item}}
+                                          </option>
+                                      </select> 
+                                  </li>
+                                  <li class="list-group-item">
+                                      <span class="badge badge-success mr-2"> Price :</span>
+                                      <input type="number" name="price" [(ngModel)]="price" readonly /> 
+          
+                                  </li>
+                                  <li class="list-group-item">
+                                      <span class="badge badge-success mr-2">Vendor:</span>
+                                          <select [(ngModel)]="orderdetails.ven_id" name="ven_id">
+                                      <option *ngFor="let f of vendor | async" value={{f.ven_id}}>
+                                      {{f.ven_name}}
+                                     </option>
+                                      </select> 
+                                     
+                                  </li>
+                                  <li class="list-group-item">
+                                   
+                                      <span class="badge badge-success mr-2">Order Date : </span> 
+                                    <input type="date" [min]="getToday()" [(ngModel)]="orderdetails.ord_date" name="ord_date" /> 
+                                     
+                                  </li>
+                                  
+                             
+                              <li class="list-group-item">
+                                   
+                                  <span class="badge badge-success mr-2">Select Quantity : </span> 
+                                <input type="number" [(ngModel)]="orderdetails.ord_qt" name="ord_qt" /> 
+                                 
+                              </li>
+                              <li class="list-group-item">
+                                   
+                                  <span class="badge badge-success mr-2">Select Wallet Type : </span>  
+                          <select [(ngModel)]="orderdetails.wal_src" name="wal_src">
+                                <option *ngFor="let f of wallet | async" value={{f.wal_src}}>
+                                 {{f.wal_src}}
+                             </option>
+                               </select> 
+                                    
+                                 </li>
+                                 <li class="list-group-item">
+                                   
+                                  <span class="badge badge-success mr-2"> Order Comments  :</span>
+                                  <input type="text" [(ngModel)]="orderdetails.ord_comments" name="ord_comments" placeholder="comments..!" /> 
+                              
+                                    
+                                 </li>
+                             
+                              <li class="list-group-item">
+                                      <input class="btn"  type="button" value="PlaceOrder" (click)="placeOrder()"/>
+                              </li>
+                      </ul>
+          </form>
+                          </div>
+          
+          </div>
+                          
+          </div>
+        

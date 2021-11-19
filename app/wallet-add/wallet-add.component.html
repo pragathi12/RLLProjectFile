@@ -1,0 +1,56 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="title">
+    Add Wallet
+  </div>
+  
+  <form #walletAdd="ngForm" (ngSubmit)="insert(walletAdd)">
+    <div class="form">
+        <div class="input_field">
+          
+          <input class="input" type="text" placeholder="customer id" name="wallets.cus_id" [(ngModel)]="wallets.cus_id" />
+          
+        </div>
+        <div class="input_field">
+          
+            <input class="input" type="text" placeholder="wallet id" name="wallets.wal_id" [(ngModel)]="wallets.wal_id" />
+          
+          </div>
+          <div class="input_field">
+          
+            <input class="input" type="text" placeholder="wallet source" name="wallets.wal_src" [(ngModel)]="wallets.wal_src" />
+            
+          </div>
+        <div class="input_field">
+          <input class="input" input type="text" placeholder="wallet amount" name="wallets.wal_amount" [(ngModel)]="wallets.wal_amount">
+        
+        </div>
+        
+        <!-- <div class="btn">
+            <input type="submit" value="Register">
+        </div> -->
+        <input type="submit" value="Addwallet" class="btn">
+      </div>	
+  </form>
+  </div>
+  
+  
+	
+</body>
+</html>
+
+
+

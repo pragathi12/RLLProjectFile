@@ -1,0 +1,62 @@
+<!--<p>vendor-search works!</p>
+Vendor Id : 
+<input type="text" name="ven_id" [(ngModel)]="ven_id" /> 
+<br/><br/>
+<input type="button" value="Search" (click)="search()" />
+
+Vendor Name :  {{(vendors | async)?.ven_name}}  <br/>
+Vendor Phoneno :  {{(vendors | async)?.ven_phone}}  <br/>
+Vendor Username :  {{(vendors | async)?.ven_username}}  <br/>
+Vendor Password :  {{(vendors| async)?.ven_password}}  <br/>
+Vendor Email :  {{(vendors | async)?.ven_email}}  <br/>-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+    <body>
+        <div class="row">
+            <div class="col-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        
+                        <input type="text" name="ven_id" [(ngModel)]="ven_id" /> 
+                        &nbsp;&nbsp;
+                        <input class="submit" type="button" value="Search" (click)="search()" />
+                          
+                    </div>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">Name:</span>   {{(vendors | async)?.ven_name}}
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">User Name:</span>  {{(vendors | async)?.ven_username}}
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">Email:</span>  {{(vendors | async)?.ven_email}}
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">Phone:</span>  {{(vendors | async)?.ven_phone}}
+                      </li>
+                      
+                
+                      <li class="list-group-item">
+                        <span class="badge badge-danger">Vender Information</span>
+                      </li>
+                    </ul>
+                  </div>
+
+            </div>
+        </div>
+  </body>
+  </html>
+
+
+
+

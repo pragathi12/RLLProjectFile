@@ -1,0 +1,96 @@
+<!--<p>customer-add works!</p>
+<form #CustomerAdd="ngForm" (ngSubmit)="insert(CustomerAdd)"> 
+
+    <p>Customer Name :
+        <input type="text" name="cus_name" [(ngModel)]="cus.cus_name" />
+    </p> 
+    <br/><br/>
+
+    <p>Customer Phone No :
+        <input type="text" name="cus_name" [(ngModel)]="cus.cus_ph_no" />
+    </p> 
+    <br/><br/>
+
+    <p>Customer Username :
+        <input type="text" name="cus_username" [(ngModel)]="cus.cus_username" />
+    </p> 
+    <br/><br/>
+
+    <p>Customer Password :
+        <input type="text" name="pwd" [(ngModel)]="cus.pwd" />
+    </p> 
+    <br/><br/>
+
+    <p>Customer Email :
+        <input type="text" name="cus_email" [(ngModel)]="cus.cus_email" />
+    </p> 
+    <br/><br/>
+
+    <input type="submit" value="Create Account">
+</form>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="title">
+    Register Customer
+  </div>
+  <div class="social_media">
+    <div class="item">
+      <i class="fab fa-facebook-f"></i>
+    </div>
+    <div class="item">
+      <i class="fab fa-twitter"></i>
+    </div>
+    <div class="item">
+      <i class="fab fa-google-plus-g"></i>
+    </div>
+  </div>
+  <form #CustomerAdd="ngForm" (ngSubmit)="insert(CustomerAdd)">
+    <div class="form">
+        <div class="input_field">
+          
+          <input class="input" type="text" placeholder="Name" name="cus_name" [(ngModel)]="cus.cus_name" />
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="input_field">
+          
+            <input class="input" type="text" placeholder="username" name="cus_username" [(ngModel)]="cus.cus_username" />
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="input_field">
+          
+            <input class="input" type="text" placeholder="+91 7889753910" name="cus_ph_no" [(ngModel)]="cus.cus_ph_no" />
+            <i class="fa fa-phone"></i>
+          </div>
+        <div class="input_field">
+          <input type="text" placeholder="Email" class="input" name="cus_email" [(ngModel)]="cus.cus_email">
+          <i class="far fa-envelope"></i>
+        </div>
+        <div class="input_field">
+          <input type="password" placeholder="Password" class="input" name="pwd" [(ngModel)]="cus.pwd">
+          <i class="fas fa-lock"></i>
+        </div>
+        <!-- <div class="btn">
+            <input type="submit" value="Register">
+        </div> -->
+        <input type="submit" value="Register" class="btn">
+      </div>	
+  </form>
+  </div>
+  {{msg}}
+  
+	
+</body>
+</html>
+
+
+

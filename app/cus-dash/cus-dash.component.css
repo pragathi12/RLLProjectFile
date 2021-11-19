@@ -1,0 +1,20 @@
+ul.nav {
+    margin:0;
+    padding:0;
+    list-style:none;
+    height: 38px; 
+    line: height 20px;
+    background:#009879; 
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+}
+ul.nav li {
+    border-right:1px solid white; 
+    float:left;
+}
+ul.nav a {
+    display:block;
+    padding:0 28px;
+    color:white;
+    text-decoration:none;
+}

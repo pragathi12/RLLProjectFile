@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+ <div class="container">
+    <div class="img">
+      <img src="https://thumbs.dreamstime.com/b/online-registration-sign-up-concept-young-man-signing-login-to-account-user-interface-secure-password-modern-vector-194944760.jpg" />
+    </div>
+    <div class="login-container">
+      <form action="index.html" #customerForm="ngForm" (ngSubmit)="insert(customerForm)">
+        <img class="avator" src="https://static8.depositphotos.com/1207999/1027/i/600/depositphotos_10275820-stock-photo-business-man-suit-avatar.jpg" />
+        <h2>Howdy, Join us</h2>
+        <div class="input-div" one>
+          <div class="i">
+            <i class="fas fa-user"></i>
+          </div>
+          <div>
+              <input class="input" placeholder="username" type="text" name="username" [(ngModel)]="username"  required />
+              
+            </div>
+        </div>
+        <div class="input-div" two>
+          <div class="i">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div>
+           <!-- <h5>password</h5> -->
+           <input class="input" placeholder="password" type="password" name="password" [(ngModel)]="password"  required/>
+
+          </div>
+        </div>
+        <div *ngIf="customerForm.submitted && !isValid"> 
+            <h6 style="color: red">Please Enter customer username and password</h6>
+           </div>
+        <br>
+       
+        <a href="#">Forgot password ?</a>
+        <a [routerLink]="['/customeradd']" class="btn">Sign Up</a>
+        <button type="submit" class="btn" >Login</button>
+      
+      <!-- <button class="btn" (click)="search()" value="Insert">Login</button>
+        <button class="btn" value="insert" (click)="search()">Login</button>
+              <a href="#">Forgot password ?</a>
+      --> 
+     
+     
+    
+    </form>
+    
+  </div>
+
+  </div>
+  </body>
+  </html>

@@ -1,0 +1,33 @@
+<table class="content-table" >
+    <thead>
+      <tr>
+        <th>Order Id</th>
+        <th>customer Id</th>
+        <th>ven Id</th>
+        <th>Wallet source</th>
+        <th>Menu id</th>
+        <th>order date</th>
+        <th>order quantity</th>
+        <th>order bill amount</th>
+        <th>order status</th>
+        <th>order comments</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let v of vorders | async">
+            <td>{{v.ord_id}} </td>
+            <td>{{v.cus_id}} </td>
+            <td>{{v.ven_id}} </td>
+            <td>{{v.wal_src}} </td>
+            <td>{{v.men_id}} </td>
+            <td>{{v.ord_date}} </td>
+            <td>{{v.ord_qt}} </td>
+            <td>{{v.ord_billamt}} </td>
+            <td>{{v.ord_status}} </td>
+            <td>{{v.ord_comments}} </td>
+        </tr>
+        
+    </tbody>
+  </table>
+
+

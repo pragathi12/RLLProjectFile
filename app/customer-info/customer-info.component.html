@@ -1,0 +1,50 @@
+<!--<p>customer-info works!</p>
+Customer Name :  {{(customer | async)?.cus_name}}  <br/>
+Phone :  {{(customer | async)?.cus_ph_no}}  <br/>
+UserName :  {{(customer | async)?.cus_username}}  <br/>
+Email :  {{(customer | async)?.cus_email}}  <br/>-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+    <body>
+        <div class="row">
+            <div class="col-6">
+                <div class="card mb-4">
+                    <h2 class="card-header">
+                        Current user
+                    </h2>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">Name:</span> {{(customer | async)?.cus_name}}
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">User Name:</span> {{(customer | async)?.cus_username}}
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">Email:</span> {{(customer | async)?.cus_email}}
+                      </li>
+                      <li class="list-group-item">
+                        <span class="badge badge-success mr-2">Phone:</span> {{(customer | async)?.cus_ph_no}}
+                      </li>
+                      
+                
+                      <li class="list-group-item">
+                        <span class="badge badge-danger">Current user</span>
+                      </li>
+                    </ul>
+                  </div>
+
+            </div>
+        </div>
+  </body>
+  </html>
+
+

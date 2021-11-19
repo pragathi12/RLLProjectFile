@@ -1,0 +1,24 @@
+
+
+<table class="content-table" >
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Phone no</th>
+        <th>Username</th>
+        <th>password</th>
+        <th>email</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of customers | async">
+            <td>{{c.cus_id}} </td>
+            <td>{{c.cus_name}} </td>
+            <td>{{c.cus_ph_no}} </td>
+            <td>{{c.cus_username}} </td>
+            <td>{{c.pwd}} </td>
+            <td>{{c.cus_email}} </td>
+        </tr>
+    </tbody>
+  </table>

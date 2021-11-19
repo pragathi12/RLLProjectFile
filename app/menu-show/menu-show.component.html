@@ -1,0 +1,23 @@
+
+<table class="content-table" >
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Cal</th>
+        <th>Speciality</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let m of menus | async">
+            <td>{{m.men_id}} </td>
+            <td>{{m.men_item}} </td>
+            <td>{{m.men_price}} </td>
+            <td>{{m.men_cal}} </td>
+            <td>{{m.men_speciality}} </td>
+          
+        </tr>
+    </tbody>
+  </table>
+
